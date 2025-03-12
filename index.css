@@ -61,9 +61,15 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000000;
+    color: #fff;
     text-align: center;
     padding: 0 20px;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .hero h1 {
@@ -83,10 +89,12 @@ nav {
     font-size: 1.1rem;
     margin-top: 20px;
     border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
 .btn:hover {
     background-color: #e67e22;
+    transform: scale(1.05); /* Slightly enlarge the button */
 }
 
 /* Services Section */
@@ -169,7 +177,7 @@ nav {
 /* Textarea Auto-resize */
 .contact-form textarea {
     min-height: 30px; /* Start with a height of 30px */
-    line-height: 1.4; /* Set line height for better readability */
+    line-height: 1.4;  /* Set line height for better readability */
     padding: 10px;
     resize: none; /* Disable resizing by the user */
 }
@@ -187,4 +195,25 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
 }
