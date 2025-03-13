@@ -1,97 +1,232 @@
-<!DOCTYPE html>
-<html lang="fr">
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Version</title>
-    <!-- Lien vers le fichier CSS -->
-    <link rel="stylesheet" href="index.css">
-    <script src="script.js" defer></script>
-    <meta name="description" content="Découvrez Version, une marque de vêtements modernes, confortables et stylés pour le quotidien. Rejoignez notre communauté et exprimez votre personnalité à travers notre style unique.">
-    <meta name="keywords" content="vêtements, mode, lifestyle, confort, style, tendances, marque, streetwear, casual">
-    <meta property="og:title" content="Version - Marque de vêtements lifestyle">
-    <meta property="og:image" content="path/to/your-image.jpg">
-</head>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
 
-<body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Version</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" aria-label="Accueil">Accueil</a></li>
-                <li><a href="#services" aria-label="Nos produits">Nos Produits</a></li>
-                <li><a href="#contact" aria-label="Contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <h1>Exprimez-vous avec Version</h1>
-            <p>Découvrez notre collection de vêtements alliant confort et style pour vous accompagner au quotidien. Version, c'est plus qu'une marque, c'est une manière de vivre.</p>
-            <a href="#contact" class="btn" aria-label="Accéder à la section de contact">Contactez-nous</a>
-        </div>
-    </section>
+/* Header Section */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
 
-    <!-- Services Section (révisée en "Nos Produits") -->
-    <section id="services" class="services">
-        <h2>Nos Produits</h2>
-        <div class="service-container">
-            <!-- Nos Vêtements -->
-            <div class="service-item">
-                <h3>Nos Vêtements</h3>
-                <p>Vêtements de sport et de lifestyle pensés pour allier confort, style et performance. De quoi être prêt à tout moment pour l'entraînement ou le quotidien.</p>
-            </div>
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
-            <!-- Citation Inspiration -->
-            <div class="service-item" id="quote-container">
-                <h3>Inspiration</h3>
-                <div id="quote">"Les muscles ne sont pas faits de viande et de sang, mais de volonté et de passion." - Arnold Schwarzenegger</div>
-            </div>
+.logo h1 {
+    font-size: 2rem;
+    margin: 0;
+}
 
-            <!-- Nos Accessoires -->
-            <div class="service-item">
-                <h3>Nos Accessoires</h3>
-                <ul>
-                    <li>Shakers</li>
-                    <li>Gants d'entraînement</li>
-                    <li>Ceintures de levage</li>
-                    <li>Sacs de sport</li>
-                    <li>Bandes de résistance</li>
-                    <li>Shakers et bouteilles</li>
-                    <li>Élastiques de musculation</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+.nav-links {
+    list-style: none;
+    display: flex;
+}
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contactez-nous</h2>
-        <form action="#" method="POST" class="contact-form">
-            <label for="name">Votre nom :</label>
-            <input type="text" id="name" name="name" required aria-label="Entrez votre nom">
+.nav-links li {
+    margin-left: 20px;
+}
 
-            <label for="email">Votre email :</label>
-            <input type="email" id="email" name="email" required aria-label="Entrez votre email">
+.nav-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
 
-            <label for="message">Votre message :</label>
-            <textarea id="message" name="message" rows="4" required aria-label="Entrez votre message"></textarea>
+.nav-links a:hover {
+    color: #f39c12;
+}
 
-            <button type="submit" class="btn" aria-label="Envoyer le formulaire de contact">Envoyer</button>
-        </form>
-    </section>
+/* Hero Section */
+.hero {
+    background: url('path/to/your-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+}
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Version. Tous droits réservés. | <a href="privacy-policy.html" style="color: #fff;">Politique de confidentialité</a></p>
-    </footer>
-</body>
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 5px;
+}
 
-</html>
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Nos Produits Section */
+.services {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+    margin: 10px;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+}
+
+/* Citations Section */
+.quotes-container {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+/* Adjusting textarea to be one line */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Textarea Auto-resize */
+.contact-form textarea {
+    min-height: 30px; /* Start with a height of 30px */
+    line-height: 1.4;  /* Set line height for better readability */
+    padding: 10px;
+    resize: none; /* Disable resizing by the user */
+}
+
+/* Focus effect for text fields */
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #f39c12;
+    outline: none;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
