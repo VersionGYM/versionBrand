@@ -1,26 +1,3 @@
-// Liste des citations
-const quotes = [
-    '"Les muscles ne sont pas faits de viande et de sang, mais de volonté et de passion." - Arnold Schwarzenegger',
-    '"La douleur que vous ressentez aujourd\'hui est la force que vous ressentirez demain." - Unknown',
-    '"Le succès n\'est pas final, l\'échec n\'est pas fatal : c\'est le courage de continuer qui compte." - Winston Churchill',
-    '"L\'entraînement est un marathon, pas un sprint." - Unknown',
-    '"Ne laissez pas la peur de l\'échec vous empêcher de réaliser vos rêves." - Unknown'
-];
-
-// Fonction pour changer la citation
-let currentQuoteIndex = 0;
-function changeQuote() {
-    const quoteElement = document.getElementById('quote');
-    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
-    quoteElement.textContent = quotes[currentQuoteIndex];
-}
-
-// Changer la citation toutes les 5 secondes
-setInterval(changeQuote, 5000);
-
-// Initialiser avec la première citation
-window.onload = changeQuote;
-
 // Function to auto-resize the textarea
 function autoResizeTextarea() {
     const textarea = document.getElementById("message");
@@ -46,3 +23,26 @@ form.addEventListener('submit', function (e) {
     alert('Ton message a été envoyé !'); // Message modifié pour correspondre au ton québécois
     form.reset();  // Reset the form after successful submission
 });
+
+// Citation Rotation (every 5 seconds)
+const quotes = [
+    '"Les muscles ne sont pas faits de viande et de sang, mais de volonté et de passion." - Arnold Schwarzenegger',
+    '"Le seul mauvais entraînement, c\'est celui que tu n\'as pas fait." - Anonyme',
+    '"La sueur est de la graisse qui pleure." - Anonyme',
+    '"Le succès n\'est pas dans ce que tu accomplis, mais dans la façon dont tu surmontes les échecs." - Arnold Schwarzenegger',
+    '"L\'entraînement n\'est pas une option, c\'est une nécessité." - Anonyme',
+];
+
+let currentQuoteIndex = 0;
+const quoteElement = document.getElementById("quote");
+
+function changeQuote() {
+    quoteElement.textContent = quotes[currentQuoteIndex];
+    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length; // Loop back to the first quote
+}
+
+// Change the quote every 5 seconds
+setInterval(changeQuote, 5000);
+
+// Initialize the first quote
+changeQuote();
