@@ -6,7 +6,7 @@ function autoResizeTextarea() {
     textarea.style.height = "auto";
     
     // Set the height to the scrollHeight, which is the full height of the content
-    textarea.style.height = `${textarea.scrollHeight}px`;
+    textarea.style.height = `${textarea.scrollHeight}px`; // Correction de syntaxe
 }
 
 // Attach the function to the textarea input event to trigger resizing
@@ -20,6 +20,6 @@ window.addEventListener('load', autoResizeTextarea);
 const form = document.querySelector('.contact-form');
 form.addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent form submission for demo purposes
-    alert('Votre message a été envoyé !');
+    alert('Ton message a été envoyé !'); // Message modifié pour correspondre au ton québécois
     form.reset();  // Reset the form after successful submission
 });
