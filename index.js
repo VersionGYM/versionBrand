@@ -6,25 +6,27 @@ function autoResizeTextarea() {
     textarea.style.height = "auto";
     
     // Set the height to the scrollHeight, which is the full height of the content
-    textarea.style.height = `${textarea.scrollHeight}px`; // Correction de syntaxe
+    textarea.style.height = `${textarea.scrollHeight}px`;
 }
 
 // Attach the function to the textarea input event to trigger resizing
 const textarea = document.getElementById("message");
-textarea.addEventListener("input", autoResizeTextarea);
-
-// Call the function initially to set the height correctly when page loads
-window.addEventListener('load', autoResizeTextarea);
+if (textarea) {
+    textarea.addEventListener("input", autoResizeTextarea);
+    window.addEventListener('load', autoResizeTextarea);
+}
 
 // Handle form submission
 const form = document.querySelector('.contact-form');
-form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent form submission for demo purposes
-    alert('Ton message a été envoyé !'); // Message modifié pour correspondre au ton québécois
-    form.reset();  // Reset the form after successful submission
-});
+if (form) {
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent form submission for demo purposes
+        alert('Ton message a été envoyé !');
+        form.reset();
+    });
+}
 
-// Citation Rotation (every 5 seconds)
+// Citation Rotation avec effet de fondu fluide
 const quotes = [
     '"Les muscles ne sont pas faits de viande et de sang, mais de volonté et de passion." - Arnold Schwarzenegger',
     '"Le seul mauvais entraînement, c\'est celui que tu n\'as pas fait." - Anonyme',
@@ -46,21 +48,18 @@ const quotes = [
 let currentQuoteIndex = 0;
 const quoteElement = document.getElementById("quote");
 
-// Function to change the quote with a fade effect
-function changeQuote() {
-    quoteElement.style.opacity = 0;  // Start by fading out the current quote
+if (quoteElement) {
+    function changeQuote() {
+        quoteElement.style.opacity = "0"; // Début du fondu (disparition)
 
-    setTimeout(() => {
-        quoteElement.textContent = quotes[currentQuoteIndex];  // Change the quote after fade-out
+        setTimeout(() => {
+            quoteElement.textContent = quotes[currentQuoteIndex];
+            quoteElement.style.opacity = "1"; // Réapparition progressive
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+        }, 1000); // Attendre 1 seconde avant d'afficher la nouvelle citation
+    }
 
-        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;  // Loop back to the start when we reach the end
-
-        quoteElement.style.opacity = 1;  // Fade in the new quote
-    }, 1000);  // Wait for 1 second (to match the fade-out time) before changing the text
+    // Initialiser la première citation et démarrer l'intervalle
+    changeQuote();
+    setInterval(changeQuote, 5000); // Changement toutes les 5 secondes
 }
-
-// Initialize the first quote
-changeQuote();
-
-// Change the quote every 5 seconds
-setInterval(changeQuote, 5000);
