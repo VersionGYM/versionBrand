@@ -1,3 +1,26 @@
+// Liste des citations
+const quotes = [
+    '"Les muscles ne sont pas faits de viande et de sang, mais de volonté et de passion." - Arnold Schwarzenegger',
+    '"La douleur que vous ressentez aujourd\'hui est la force que vous ressentirez demain." - Unknown',
+    '"Le succès n\'est pas final, l\'échec n\'est pas fatal : c\'est le courage de continuer qui compte." - Winston Churchill',
+    '"L\'entraînement est un marathon, pas un sprint." - Unknown',
+    '"Ne laissez pas la peur de l\'échec vous empêcher de réaliser vos rêves." - Unknown'
+];
+
+// Fonction pour changer la citation
+let currentQuoteIndex = 0;
+function changeQuote() {
+    const quoteElement = document.getElementById('quote');
+    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+    quoteElement.textContent = quotes[currentQuoteIndex];
+}
+
+// Changer la citation toutes les 5 secondes
+setInterval(changeQuote, 5000);
+
+// Initialiser avec la première citation
+window.onload = changeQuote;
+
 // Function to auto-resize the textarea
 function autoResizeTextarea() {
     const textarea = document.getElementById("message");
