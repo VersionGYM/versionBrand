@@ -36,13 +36,14 @@ const quotes = [
 let currentQuoteIndex = 0;
 const quoteElement = document.getElementById("quote");
 
+// Function to change the quote
 function changeQuote() {
     quoteElement.textContent = quotes[currentQuoteIndex];
-    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length; // Loop back to the first quote
+    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length; // Loop back to the start when we reach the end
 }
-
-// Change the quote every 5 seconds
-setInterval(changeQuote, 5000);
 
 // Initialize the first quote
 changeQuote();
+
+// Change the quote every 5 seconds
+setInterval(changeQuote, 5000);
