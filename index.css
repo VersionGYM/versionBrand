@@ -63,6 +63,7 @@ nav {
     padding: 40px 30px; /* Garde un padding confortable */
     width: 95%; /* Augmenter la largeur à 95% */
     max-width: 1200px; /* Limiter la largeur max à 1200px */
+    margin-bottom: 30px; /* Ajuste la valeur pour avoir plus ou moins d'espace */
 }
 
 /* Agrandir le texte dans la section Hero */
