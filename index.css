@@ -61,20 +61,20 @@ nav {
 .hero-text {
     background-color: rgba(0, 0, 0, 0.6); /* Augmenter l'opacité pour un meilleur contraste */
     padding: 40px 30px; /* Augmenter le padding pour agrandir la zone */
-    width: 80%; /* Réduire légèrement la largeur pour plus d'espace autour */
-    max-width: 800px; /* Limiter la largeur max de la zone */
+    width: 90%; /* Augmenter la largeur de la zone */
+    max-width: 1000px; /* Limiter la largeur max de la zone */
 }
 
 /* Agrandir le texte dans la section Hero */
 .hero h1 {
     font-size: 4rem; /* Taille du texte du titre */
     font-weight: bold;
-    color: #fff;
+    color: #000000;
 }
 
 .hero p {
     font-size: 1.75rem; /* Taille du texte du paragraphe */
-    color: #fff;
+    color: #000000;
     margin-top: 20px; /* Plus d'espace entre le texte et le bouton */
 }
 
