@@ -58,6 +58,25 @@ nav {
     color: black;
 }
 
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+/* Agrandir le texte dans la section Hero */
+.hero h1 {
+    font-size: 3rem; /* Taille du texte du titre */
+    font-weight: bold;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.5rem; /* Taille du texte du paragraphe */
+    color: #fff;
+    margin-top: 15px;
+}
+
+
 /* Bouton */
 .btn {
     display: inline-block; /* Permet au lien de se comporter comme un bouton */
@@ -74,11 +93,6 @@ nav {
 
 .btn:hover {
     background-color: #e67e22; /* Couleur de fond au survol */
-}
-
-.hero-text {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
 }
 
 /* Nos Produits Section */
