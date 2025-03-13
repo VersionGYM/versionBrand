@@ -49,6 +49,8 @@ let currentQuoteIndex = 0;
 const quoteElement = document.getElementById("quote");
 
 if (quoteElement) {
+    quoteElement.style.transition = "opacity 1s ease-in-out"; // Ajoute une transition fluide
+    
     function changeQuote() {
         quoteElement.style.opacity = "0"; // Début du fondu (disparition)
 
@@ -61,5 +63,5 @@ if (quoteElement) {
 
     // Initialiser la première citation et démarrer l'intervalle
     changeQuote();
-    setInterval(changeQuote, 7000); // Changement toutes les 5 secondes
+    setInterval(changeQuote, 6500); // Changement toutes les 7 secondes
 }
