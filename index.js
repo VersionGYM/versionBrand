@@ -29,19 +29,19 @@ if (form) {
 // Citation Rotation avec effet de fondu fluide
 const quotes = [
     '"Les muscles ne sont pas faits de viande et de sang, mais de volonté et de passion." - Arnold Schwarzenegger',
-    '"Le seul mauvais entraînement, c\'est celui que tu n\'as pas fait." - Anonyme',
-    '"La sueur est de la graisse qui pleure." - Anonyme',
+    '"Le seul mauvais entraînement, c\'est celui que tu n\'as pas fait." - Bruce Lee',
+    '"La sueur est de la graisse qui pleure." - Jillian Michaels',
     '"Le succès n\'est pas dans ce que tu accomplis, mais dans la façon dont tu surmontes les échecs." - Arnold Schwarzenegger',
-    '"L\'entraînement n\'est pas une option, c\'est une nécessité." - Anonyme',
-    '"Ne rêve pas de succès, travaille pour l\'atteindre." - Anonyme',
+    '"L\'entraînement n\'est pas une option, c\'est une nécessité." - Usain Bolt',
+    '"Ne rêve pas de succès, travaille pour l\'atteindre." - Estée Lauder',
     '"Il n\'y a pas de raccourci vers n\'importe où qui en vaille la peine." - Beverly Sills',
     '"Le travail acharné bat le talent quand le talent ne travaille pas dur." - Tim Notke',
     '"Tout ce que tu veux est de l’autre côté de la peur." - Jack Canfield',
-    '"Ce n’est pas ce que tu fais, mais la manière dont tu le fais qui fait la différence." - Anonyme',
+    '"Ce n’est pas ce que tu fais, mais la manière dont tu le fais qui fait la différence." - John Wooden',
     '"L\'échec est simplement l\'opportunité de recommencer, cette fois de manière plus intelligente." - Henry Ford',
-    '"L\'entraînement, c’est la transformation de la douleur en pouvoir." - Anonyme',
-    '"Quand tu penses que tu ne peux plus, c’est à ce moment que tu peux tout accomplir." - Anonyme',
-    '"L\'envie d’être meilleur que la veille doit être plus grande que la douleur." - Anonyme',
+    '"L\'entraînement, c’est la transformation de la douleur en pouvoir." - Muhammad Ali',
+    '"Quand tu penses que tu ne peux plus, c’est à ce moment que tu peux tout accomplir." - David Goggins',
+    '"L\'envie d’être meilleur que la veille doit être plus grande que la douleur." - Kobe Bryant',
     '"Ce que tu fais aujourd’hui peut améliorer tous tes lendemains." - Ralph Marston'
 ];
 
@@ -63,5 +63,5 @@ if (quoteElement) {
 
     // Initialiser la première citation et démarrer l'intervalle
     changeQuote();
-    setInterval(changeQuote, 6500); // Changement toutes les 7 secondes
+    setInterval(changeQuote, 7000); // Changement toutes les 7 secondes
 }
