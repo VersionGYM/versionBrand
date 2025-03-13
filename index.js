@@ -35,5 +35,5 @@ function changeQuote() {
     currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
 }
 
-setInterval(changeQuote, 5000);
+setInterval(changeQuote, 7000);
 changeQuote();
