@@ -59,10 +59,10 @@ nav {
 }
 
 .hero-text {
-    background-color: rgba(0, 0, 0, 0.6); /* Augmenter l'opacité pour un meilleur contraste */
-    padding: 40px 30px; /* Augmenter le padding pour agrandir la zone */
-    width: 90%; /* Augmenter la largeur de la zone */
-    max-width: 1000px; /* Limiter la largeur max de la zone */
+    background-color: rgba(0, 0, 0, 0.6); /* Conserve l'effet d'opacité */
+    padding: 40px 30px; /* Garde un padding confortable */
+    width: 95%; /* Augmenter la largeur à 95% */
+    max-width: 1200px; /* Limiter la largeur max à 1200px */
 }
 
 /* Agrandir le texte dans la section Hero */
