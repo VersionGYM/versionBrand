@@ -145,6 +145,12 @@ nav {
     border-radius: 5px;
 }
 
+/* Citation Fade effect */
+#quote {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
 /* Contact Section */
 .contact {
     background-color: #fff;
