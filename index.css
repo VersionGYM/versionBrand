@@ -69,12 +69,12 @@ nav {
 .hero h1 {
     font-size: 4rem; /* Taille du texte du titre */
     font-weight: bold;
-    color: #000000;
+    color: black;
 }
 
 .hero p {
     font-size: 1.75rem; /* Taille du texte du paragraphe */
-    color: #000000;
+    color: black;
     margin-top: 20px; /* Plus d'espace entre le texte et le bouton */
 }
 
@@ -85,7 +85,7 @@ nav {
     display: inline-block; /* Permet au lien de se comporter comme un bouton */
     padding: 12px 25px;
     background-color: #f39c12;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 1rem;
     border-radius: 5px;
