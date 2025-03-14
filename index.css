@@ -118,6 +118,7 @@ nav {
 
 .en-savoir-plus:hover {
     background-color: #e67e22;
+    text-decoration: none;
     transform: scale(1.01); /* Très léger agrandissement */
 }
 
