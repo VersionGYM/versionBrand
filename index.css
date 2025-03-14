@@ -96,7 +96,8 @@ nav {
     margin-top: 50px;
 }
 
-.btn-small {
+.en-savoir-plus:hover {
+    transform: scale(1.05); /* Légère augmentation de taille */
     padding: 8px 16px; /* Réduit le padding */
     font-size: 0.9rem; /* Diminue la taille du texte */
 }
