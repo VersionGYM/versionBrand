@@ -243,6 +243,21 @@ nav {
     visibility: visible;
 }
 
+@media (min-width: 769px) { 
+    /* Appliquer uniquement sur les écrans plus grands que 768px */
+    .contact-form {
+        position: fixed;
+        bottom: 20px; /* Distance du bas */
+        left: 20px; /* Distance de la gauche */
+        width: 300px; /* Largeur fixe */
+        background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
 /* =================== */
 /* Adaptation Mobile */
 /* =================== */
