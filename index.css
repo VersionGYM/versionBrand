@@ -93,7 +93,7 @@ nav {
     transition: transform 0.2s ease, background-color 0.3s ease;
     cursor: pointer;
     text-decoration: none;
-    margin-top: 55px;
+    margin-top: 50px;
 }
 
 .btn:hover {
