@@ -65,3 +65,18 @@ if (quoteElement) {
     changeQuote();
     setInterval(changeQuote, 7000); // Changement toutes les 7 secondes
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const logo = document.querySelector(".logo h1");
+    const popup = document.getElementById("logo-popup");
+
+    logo.addEventListener("click", () => {
+        popup.classList.add("show");
+    });
+
+    popup.addEventListener("click", () => {
+        popup.classList.remove("show");
+    });
+});
