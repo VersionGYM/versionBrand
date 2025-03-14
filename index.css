@@ -127,6 +127,12 @@ nav {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.service-item .btn {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+
 /* Contact Section */
 .contact-form {
     background: #fff;
