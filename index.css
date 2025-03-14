@@ -96,13 +96,13 @@ nav {
     margin-top: 50px;
 }
 
-.en-savoir-plus{
-    padding: 8px 16px; /* Réduit le padding */
-    font-size: 0.9rem; /* Diminue la taille du texte */
+.en-savoir-plus {
+    font-size: 0.9rem; /* Réduit la taille de base */
+    padding: 8px 18px; /* Réduit le padding */
 }
-    
+
 .en-savoir-plus:hover {
-    transform: scale(1.1); /* Agrandit légèrement le bouton */
+    transform: scale(1.03); /* Très léger agrandissement */
 }
 
 .btn:hover {
