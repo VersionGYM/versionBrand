@@ -150,6 +150,12 @@ nav {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.service-item ul {
+    list-style: none; /* Supprime les puces */
+    padding: 0; /* Enlève le padding par défaut */
+}
+
+
 .service-item .btn {
     margin-top: 10px;
     display: inline-block;
