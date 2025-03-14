@@ -42,8 +42,8 @@ const quotes = [
     '"L\'entraînement, c’est la transformation de la douleur en pouvoir." - Muhammad Ali',
     '"Quand tu penses que tu ne peux plus, c’est à ce moment que tu peux tout accomplir." - David Goggins',
     '"L\'envie d’être meilleur que la veille doit être plus grande que la douleur." - Kobe Bryant',
-    '"Ce que tu fais aujourd’hui peut améliorer tous tes lendemains." - Ralph Marston'
-    '"They don\'t know me son" - David Goggins'
+    '"Ce que tu fais aujourd’hui peut améliorer tous tes lendemains." - Ralph Marston',
+    '"They don\'t know me son" - David Goggins',
     '"Light weight baby" - Ronnie Coleman'
 ];
 
@@ -75,10 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const popup = document.getElementById("logo-popup");
 
     logo.addEventListener("click", () => {
-        popup.classList.add("show");
+        popup.classList.add("show");  // Affiche le popup
     });
 
     popup.addEventListener("click", () => {
-        popup.classList.remove("show");
+        popup.classList.remove("show");  // Cache le popup quand on clique dessus
     });
 });
