@@ -96,30 +96,20 @@ nav {
     margin-top: 50px;
 }
 
-.en-savoir-plus {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #f39c12;
-    color: black;
-    text-align: center;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    margin-top: 50px;
-}
-
-.en-savoir-plus:hover {
-    background-color: #e67e22;
-    transform: scale(1.1); /* Agrandit légèrement le bouton */
-}
-
 .btn:hover {
     background-color: #e67e22;
     transform: scale(1.1); /* Agrandit légèrement le bouton */
 }
 
+
+.en-savoir-plus {
+    font-size: 0.9rem; /* Réduit la taille de base */
+    padding: 8px 18px; /* Réduit le padding */
+}
+
+.en-savoir-plus:hover {
+    transform: scale(1.03); /* Très léger agrandissement */
+}
 
 
 /* Nos Produits Section */
