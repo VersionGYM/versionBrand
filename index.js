@@ -43,6 +43,8 @@ const quotes = [
     '"Quand tu penses que tu ne peux plus, c’est à ce moment que tu peux tout accomplir." - David Goggins',
     '"L\'envie d’être meilleur que la veille doit être plus grande que la douleur." - Kobe Bryant',
     '"Ce que tu fais aujourd’hui peut améliorer tous tes lendemains." - Ralph Marston'
+    '"They don\'t know me son" - David Goggins'
+    '"Light weight baby" - Ronnie Coleman'
 ];
 
 let currentQuoteIndex = 0;
