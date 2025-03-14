@@ -110,15 +110,16 @@ nav {
     text-align: center;
     font-size: 0.9rem;
     border-radius: 5px;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
     text-decoration: none;
-    margin-top: 50px;
+    border: none; /* Supprime tout contour */
 }
 
 .en-savoir-plus:hover {
-    background-color: #000000;
-    transform: scale(1.03); /* Très léger agrandissement */
+    background-color: black;
+    color: white; /* Change la couleur du texte pour assurer la lisibilité */
+    transform: scale(1.01); /* Très léger agrandissement */
 }
 
 
