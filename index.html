@@ -65,9 +65,16 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contactez-nous</h2>
-        <form action="#" method="POST" class="contact-form">
+    <div class="toggle-form">
+        <span>&#9660;</span> <!-- Flèche vers le bas -->
+    </div>
+
+<section id="contact" class="contact">
+    <div class="contact-wrapper">
+        <div class="toggle-form">
+            <span>&#9660;</span> <!-- Flèche vers le bas -->
+        </div>
+        <form action="#" method="POST" class="contact-form hidden">
             <label for="name">Votre nom :</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Votre email :</label>
@@ -76,7 +83,9 @@
             <textarea id="message" name="message" rows="4" required></textarea>
             <button type="submit" class="btn">Envoyer</button>
         </form>
-    </section>
+    </div>
+</section>
+
 
     <!-- Popup du Logo -->
     <div id="logo-popup" class="logo-popup">
