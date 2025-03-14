@@ -82,3 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
         popup.classList.remove("show");  // Cache le popup quand on clique dessus
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleFormBtn = document.querySelector(".toggle-form");
+    const contactForm = document.querySelector(".contact-form");
+
+    if (toggleFormBtn && contactForm) {
+        toggleFormBtn.addEventListener("click", (event) => {
+            event.stopPropagation(); // Évite de fermer immédiatement après ouverture
+            contactForm.classList.toggle("hidden");
+            toggleFormBtn.classList.toggle("active"); // Tourne la flèche
+        });
+    }
+});
