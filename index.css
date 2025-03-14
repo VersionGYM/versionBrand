@@ -102,7 +102,7 @@ nav {
 }
     
 .en-savoir-plus:hover {
-    transform: scale(1.05); /* Légère augmentation de taille */
+    transform: scale(1.1); /* Agrandit légèrement le bouton */
 }
 
 .btn:hover {
