@@ -243,4 +243,65 @@ nav {
     visibility: visible;
 }
 
+/* =================== */
+/* Adaptation Mobile */
+/* =================== */
+
+@media (max-width: 768px) {  
+    /* Ajuster la navigation */
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Ajustement de la section Hero */
+    .hero {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Réduction du titre */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Réduction du texte */
+    }
+
+    /* Ajustement des services */
+    .service-container {
+        flex-direction: column; /* Pour empiler les cartes */
+        align-items: center;
+    }
+
+    .service-item {
+        width: 90%; /* Prend presque toute la largeur de l'écran */
+    }
+
+    /* Formulaire de contact */
+    .contact-form {
+        width: 90%; /* Ajuste la largeur */
+        max-width: none;
+    }
+
+    /* Boutons adaptés */
+    .btn, .en-savoir-plus {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    /* Citations */
+    .quote-container {
+        font-size: 1.2rem;
+    }
+}
 
