@@ -83,7 +83,7 @@ nav {
 
 /* Bouton */
 .btn {
-    display: inline-block; /* Permet au lien de se comporter comme un bouton */
+    display: inline-block;
     padding: 12px 25px;
     background-color: #f39c12;
     color: black;
@@ -91,13 +91,15 @@ nav {
     font-size: 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
-    text-decoration: none; /* Supprime le soulignement */
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 40px; /* Augmente la marge pour éloigner du texte */
 }
 
 .btn:hover {
-    background-color: #e67e22; /* Couleur de fond au survol */
+    background-color: #e67e22;
 }
+
 
 /* Nos Produits Section */
 .services {
