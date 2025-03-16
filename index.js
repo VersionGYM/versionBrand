@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (toggleFormBtn && contactForm) {
         toggleFormBtn.addEventListener("click", (event) => {
-            event.stopPropagation(); // Évite de fermer immédiatement après ouverture
+            event.stopPropagation();
             contactForm.classList.toggle("hidden");
             toggleFormBtn.classList.toggle("active"); // Tourne la flèche
         });
