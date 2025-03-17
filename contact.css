@@ -5,6 +5,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    height: 100vh; /* Permet de prendre toute la hauteur de la page */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Section */
@@ -50,7 +53,7 @@ header .nav-links a:hover {
 
 /* Hero Section */
 #contact-hero {
-    background-color: #0066cc;
+    background-color: #0066cc; /* Couleur principale du site */
     color: white;
     padding: 80px 20px;
     text-align: center;
@@ -70,19 +73,25 @@ header .nav-links a:hover {
 /* Contact Form Section */
 .contact {
     background-color: #fff;
-    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Permet au formulaire de prendre toute la hauteur disponible */
+    padding: 20px;
+    height: 100%; /* Prend toute la hauteur */
 }
 
 .contact-wrapper {
     max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .contact-form {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .contact-form label {
@@ -102,7 +111,7 @@ header .nav-links a:hover {
 }
 
 .contact-form button {
-    background-color: #0066cc;
+    background-color: #0066cc; /* Couleur principale du site */
     color: white;
     padding: 12px 20px;
     font-size: 16px;
@@ -110,10 +119,11 @@ header .nav-links a:hover {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 100%; /* Le bouton prend toute la largeur du formulaire */
 }
 
 .contact-form button:hover {
-    background-color: #005bb5;
+    background-color: #005bb5; /* Couleur plus foncée au survol */
 }
 
 /* Footer Section */
