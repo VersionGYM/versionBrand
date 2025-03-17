@@ -82,26 +82,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Fonction pour basculer l'affichage du formulaire de contact
 document.addEventListener("DOMContentLoaded", () => {
-    const toggleFormBtn = document.querySelector(".toggle-form");
-    const contactForm = document.querySelector(".contact-form");
+    const toggleFormBtn = document.querySelector(".toggle-form"); // Flèche
+    const contactForm = document.querySelector(".contact-form"); // Formulaire
     const contactButton = document.querySelector(".btn"); // Bouton "Contactez-nous"
 
     if (toggleFormBtn && contactForm) {
-        toggleFormBtn.addEventListener("click", (event) => {
-            event.stopPropagation(); // Empêche la propagation de l'événement
-            contactForm.classList.toggle("hidden");
-            toggleFormBtn.classList.toggle("active"); // Tourne la flèche
+        toggleFormBtn.addEventListener("click", () => {
+            if (contactForm.style.display === "none" || contactForm.style.display === "") {
+                contactForm.style.display = "block"; // Afficher
+                toggleFormBtn.classList.add("active"); // Tourner la flèche
+            } else {
+                contactForm.style.display = "none"; // Cacher
+                toggleFormBtn.classList.remove("active"); // Remettre la flèche à l'état normal
+            }
         });
 
-        // Affichage du formulaire lorsque le bouton "Contactez-nous" est cliqué
         if (contactButton) {
             contactButton.addEventListener("click", () => {
-                contactForm.classList.remove("hidden");
-                toggleFormBtn.classList.add("active"); // Assure que la flèche est tournée
+                contactForm.style.display = "block"; // Toujours afficher si bouton cliqué
+                toggleFormBtn.classList.add("active"); // Tourner la flèche
             });
         }
     }
 });
-
