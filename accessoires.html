@@ -1,39 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Accessoires</title>
+    <title>Accessoires - Version</title>
     <!-- Lien vers le fichier CSS -->
-    <link rel="stylesheet" href="accessoires.css">
-    <script src="accessoires.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
 
-<section id="shakers">
-    <p>Performance, hydratation, bien-être : tout en un !
-        Avec notre shaker de protéines, vous pouvez mélanger rapidement vos protéines en poudre pour un apport nutritionnel immédiat. 
-        Emportez-le partout, à la salle, au bureau, ou en déplacement, et assurez-vous de toujours donner le meilleur de vous-même.</p>
-        <h2>Nos shakers</h2>
-    <p>photos</p>
-<section id="ceintures">
-    <p>La sécurité avant tout, sans compromis sur le confort.
-        Avec sa conception ergonomique, notre ceinture de levage vous offre un soutien exceptionnel tout en restant confortable pendant vos entraînements. 
-        Protégez votre dos, prévenez les blessures et concentrez-vous sur vos performances.</p>
-        <h2>Nos ceintures</h2>
-    <p>photos</p>
-<section id="sacs">
-    <p>Votre style, au service de vos objectifs.
-        Avec nos sacs de sport, transportez tout ce dont vous avez besoin pour rester actif et organisé. 
-        Conçus pour s'adapter à votre mode de vie, ils combinent style et fonctionnalité. 
-        Que ce soit à la salle, au bureau ou en voyage, nos sacs vous accompagnent partout, prêts à soutenir vos ambitions et à vous aider à toujours donner le meilleur de vous-même</p>
-        <h2>Nos sacs</h2>
-    <p>photos</p>
-    <section id="bandes">
-    <p>Votre puissance, partout avec vous. 
-        Nos bandes de résistance sont vos alliées idéales pour un entraînement efficace, où que vous soyez. 
-        Polyvalentes et compactes, elles vous permettent de travailler tous les groupes musculaires, à la maison, à la salle ou même en déplacement. 
-        Maximisez votre performance et atteignez vos objectifs avec une solution simple, pratique et toujours à vos côtés.</p>
-        <h2>Nos bandes</h2>
-        <p>photos</p>
-    <!-- Ajoute des images, prix et bouton d'achat ici -->
-</section>
+<body>
+    <!-- En-tête du site -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Version</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="accessoires.html">Accessoires</a></li>
+                <li><a href="vêtements.html">Vêtements</a></li>
+                <li><a href="#contact-form" class="btn">Contactez-nous</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section principale de la page -->
+    <main>
+        <!-- Section Shakers -->
+        <section id="shakers">
+            <p>Performance, hydratation, bien-être : tout en un !
+                Avec notre shaker de protéines, vous pouvez mélanger rapidement vos protéines en poudre pour un apport nutritionnel immédiat. 
+                Emportez-le partout, à la salle, au bureau, ou en déplacement, et assurez-vous de toujours donner le meilleur de vous-même.</p>
+            <h2>Nos shakers</h2>
+            <p>photos</p>
+        </section>
+
+        <!-- Section Ceintures -->
+        <section id="ceintures">
+            <p>La sécurité avant tout, sans compromis sur le confort.
+                Avec sa conception ergonomique, notre ceinture de levage vous offre un soutien exceptionnel tout en restant confortable pendant vos entraînements. 
+                Protégez votre dos, prévenez les blessures et concentrez-vous sur vos performances.</p>
+            <h2>Nos ceintures</h2>
+            <p>photos</p>
+        </section>
+
+        <!-- Section Sacs -->
+        <section id="sacs">
+            <p>Votre style, au service de vos objectifs.
+                Avec nos sacs de sport, transportez tout ce dont vous avez besoin pour rester actif et organisé. 
+                Conçus pour s'adapter à votre mode de vie, ils combinent style et fonctionnalité. 
+                Que ce soit à la salle, au bureau ou en voyage, nos sacs vous accompagnent partout, prêts à soutenir vos ambitions et à vous aider à toujours donner le meilleur de vous-même</p>
+            <h2>Nos sacs</h2>
+            <p>photos</p>
+        </section>
+
+        <!-- Section Bandes -->
+        <section id="bandes">
+            <p>Votre puissance, partout avec vous. 
+                Nos bandes de résistance sont vos alliées idéales pour un entraînement efficace, où que vous soyez. 
+                Polyvalentes et compactes, elles vous permettent de travailler tous les groupes musculaires, à la maison, à la salle ou même en déplacement. 
+                Maximisez votre performance et atteignez vos objectifs avec une solution simple, pratique et toujours à vos côtés.</p>
+            <h2>Nos bandes</h2>
+            <p>photos</p>
+        </section>
+    </main>
+
+    <!-- Formulaire de contact -->
+    <div class="contact-form hidden">
+        <form action="#" method="POST" class="form">
+            <h3>Contactez-nous</h3>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Version. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
