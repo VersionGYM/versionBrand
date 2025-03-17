@@ -59,29 +59,26 @@ nav {
 }
 
 .hero-text {
-    background-color: rgba(0, 0, 0, 0.6); /* Conserve l'effet d'opacité */
-    padding: 40px 30px; /* Garde un padding confortable */
-    width: 95%; /* Augmenter la largeur à 95% */
-    max-width: 1200px; /* Limiter la largeur max à 1200px */
-    margin-bottom: 30px; /* Ajuste la valeur pour avoir plus ou moins d'espace */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px 30px;
+    width: 95%;
+    max-width: 1200px;
+    margin-bottom: 30px;
 }
 
-/* Agrandir le texte dans la section Hero */
 .hero h1 {
-    font-size: 4rem; /* Taille du texte du titre */
+    font-size: 4rem;
     font-weight: bold;
     color: black;
 }
 
 .hero p {
-    font-size: 1.75rem; /* Taille du texte du paragraphe */
+    font-size: 1.75rem;
     color: black;
-    margin-top: 20px; /* Plus d'espace entre le texte et le bouton */
+    margin-top: 20px;
 }
 
-
-
-/* Bouton */
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -98,10 +95,9 @@ nav {
 
 .btn:hover {
     background-color: #e67e22;
-    transform: scale(1.1); /* Agrandit légèrement le bouton */
+    transform: scale(1.1);
 }
 
-/* Bouton "En savoir plus" */
 .en-savoir-plus {
     display: inline-block;
     padding: 8px 18px;
@@ -110,21 +106,17 @@ nav {
     text-align: center;
     font-size: 0.9rem;
     border-radius: 5px;
-    transition: transform 0.2s ease, background-color 0.3s ease;  /* Ajout de la transition */
+    transition: transform 0.2s ease, background-color 0.3s ease;
     cursor: pointer;
-    text-decoration: none; /* Empêche le soulignement */
+    text-decoration: none;
     margin-top: 30px;
 }
 
-/* Effet au survol */
 .en-savoir-plus:hover {
     background-color: #e67e22;
-    text-decoration: none;  /* Empêche le soulignement */
-    transform: scale(1.1); /* Agrandissement fluide */
+    text-decoration: none;
+    transform: scale(1.1);
 }
-
-
-
 
 /* Nos Produits Section */
 .services {
@@ -135,26 +127,25 @@ nav {
 
 .service-container {
     display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-    gap: 20px; /* Espacement entre les éléments */
-    flex-wrap: wrap; /* Permet d’aller à la ligne sur petits écrans */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .service-item {
     background: #f4f4f4;
     padding: 20px;
     border-radius: 10px;
-    width: 30%; /* Définit la largeur des carrés */
-    min-width: 250px; /* Empêche qu’ils deviennent trop petits */
+    width: 30%;
+    min-width: 250px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .service-item ul {
-    list-style: none; /* Supprime les puces */
-    padding: 0; /* Enlève le padding par défaut */
+    list-style: none;
+    padding: 0;
 }
-
 
 .service-item .btn {
     margin-top: 10px;
@@ -162,11 +153,10 @@ nav {
 }
 
 .service-item a:hover {
-    font-size: 1.2rem; /* Augmente légèrement la taille du texte */
-    text-decoration: underline; /* Souligne le texte */
+    font-size: 1.2rem;
+    text-decoration: underline;
     transition: transform 0.2s ease, background-color 0.3s ease;
 }
-
 
 /* Contact Section */
 .contact-form {
@@ -200,7 +190,7 @@ nav {
 }
 
 .toggle-form.active span {
-    transform: rotate(180deg); /* Tourne la flèche vers le haut */
+    transform: rotate(180deg);
 }
 
 .contact-form label {
@@ -256,86 +246,20 @@ nav {
     max-height: 80%;
 }
 
-/* Affichage du popup */
 .logo-popup.show {
     opacity: 1;
     visibility: visible;
 }
 
-@media (min-width: 769px) { 
-    /* Appliquer uniquement sur les écrans plus grands que 768px */
+@media (min-width: 769px) {
     .contact-form {
         position: fixed;
-        bottom: 20px; /* Distance du bas */
-        left: 20px; /* Distance de la gauche */
-        width: 300px; /* Largeur fixe */
-        background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+        bottom: 20px;
+        left: 20px;
+        width: 300px;
+        background: rgba(255, 255, 255, 0.9);
         padding: 20px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 }
-
-
-/* =================== */
-/* Adaptation Mobile */
-/* =================== */
-
-@media (max-width: 768px) {  
-    /* Ajuster la navigation */
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    /* Ajustement de la section Hero */
-    .hero {
-        height: auto;
-        padding: 50px 20px;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem; /* Réduction du titre */
-    }
-
-    .hero p {
-        font-size: 1.2rem; /* Réduction du texte */
-    }
-
-    /* Ajustement des services */
-    .service-container {
-        flex-direction: column; /* Pour empiler les cartes */
-        align-items: center;
-    }
-
-    .service-item {
-        width: 90%; /* Prend presque toute la largeur de l'écran */
-    }
-
-    /* Formulaire de contact */
-    .contact-form {
-        width: 90%; /* Ajuste la largeur */
-        max-width: none;
-    }
-
-    /* Boutons adaptés */
-    .btn, .en-savoir-plus {
-        padding: 10px 15px;
-        font-size: 1rem;
-    }
-
-    /* Citations */
-    .quote-container {
-        font-size: 1.2rem;
-    }
-}
-
