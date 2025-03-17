@@ -71,12 +71,14 @@ nav {
     font-size: 4rem;
     font-weight: bold;
     color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
     font-size: 1.75rem;
     color: black;
     margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Buttons */
@@ -250,4 +252,14 @@ nav {
 .logo-popup.show {
     opacity: 1;
     visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column; /* Empile les éléments verticalement sur les petits écrans */
+    }
+
+    .service-item {
+        width: 100%; /* Chaque élément prend toute la largeur */
+    }
 }
