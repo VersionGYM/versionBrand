@@ -50,7 +50,7 @@ header .nav-links a:hover {
 
 /* Hero Section */
 #contact-hero {
-    background-color: #0066cc; /* Couleur principale du site */
+    background-color: #0066cc;
     color: white;
     padding: 80px 20px;
     text-align: center;
@@ -102,7 +102,7 @@ header .nav-links a:hover {
 }
 
 .contact-form button {
-    background-color: #0066cc; /* Couleur principale du site */
+    background-color: #0066cc;
     color: white;
     padding: 12px 20px;
     font-size: 16px;
@@ -113,7 +113,7 @@ header .nav-links a:hover {
 }
 
 .contact-form button:hover {
-    background-color: #005bb5; /* Couleur plus foncée au survol */
+    background-color: #005bb5;
 }
 
 /* Footer Section */
