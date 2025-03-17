@@ -22,8 +22,14 @@ header nav {
 
 header .logo h1 {
     font-size: 24px;
-    color: #333;
+    color: #0066cc; /* Couleur principale du site */
     margin: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+header .logo h1:hover {
+    color: #005bb5; /* Couleur sombre au survol */
 }
 
 header .nav-links {
@@ -50,7 +56,7 @@ header .nav-links a:hover {
 
 /* Hero Section */
 #contact-hero {
-    background-color: #0066cc;
+    background-color: #0066cc; /* Couleur principale du site */
     color: white;
     padding: 80px 20px;
     text-align: center;
@@ -102,18 +108,19 @@ header .nav-links a:hover {
 }
 
 .contact-form button {
-    background-color: #0066cc;
+    background-color: #0066cc; /* Couleur principale du site */
     color: white;
     padding: 12px 20px;
     font-size: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: #005bb5;
+    transform: scale(1.1); /* Effet de grandissement au survol */
+    background-color: #005bb5; /* Couleur sombre au survol */
 }
 
 /* Footer Section */
@@ -126,4 +133,28 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 14px;
+}
+
+/* Style du popup du logo */
+.logo-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #0066cc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.logo-popup.show {
+    display: block;
+}
+
+.logo-popup img {
+    max-width: 100%;
+    height: auto;
 }
