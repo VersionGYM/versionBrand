@@ -1,16 +1,13 @@
-/* Style global pour la page de contact */
+/* Style global */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    height: 100vh; /* Permet de prendre toute la hauteur de la page */
-    display: flex;
-    flex-direction: column;
 }
 
-/* Header Section */
+/* Header */
 header {
     background-color: #fff;
     padding: 20px;
@@ -25,7 +22,6 @@ header nav {
 
 header .logo h1 {
     font-size: 24px;
-    color: #333;
     margin: 0;
 }
 
@@ -47,16 +43,17 @@ header .nav-links a {
     transition: color 0.3s;
 }
 
-header .nav-links a:hover {
+header .nav-links a:hover,
+header .nav-links a.active {
     color: #0066cc;
 }
 
 /* Hero Section */
 #contact-hero {
-    background-color: #0066cc; /* Couleur principale du site */
+    background-color: #0066cc;
     color: white;
-    padding: 80px 20px;
     text-align: center;
+    padding: 60px 20px;
 }
 
 #contact-hero .hero-text h1 {
@@ -73,17 +70,12 @@ header .nav-links a:hover {
 /* Contact Form Section */
 .contact {
     background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1; /* Permet au formulaire de prendre toute la hauteur disponible */
-    padding: 20px;
-    height: 100%; /* Prend toute la hauteur */
+    padding: 40px 20px;
 }
 
 .contact-wrapper {
     max-width: 800px;
-    width: 100%;
+    margin: 0 auto;
 }
 
 .contact-form {
@@ -103,15 +95,16 @@ header .nav-links a:hover {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .contact-form button {
-    background-color: #0066cc; /* Couleur principale du site */
+    background-color: #0066cc;
     color: white;
     padding: 12px 20px;
     font-size: 16px;
@@ -119,14 +112,14 @@ header .nav-links a:hover {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%; /* Le bouton prend toute la largeur du formulaire */
+    width: 100%;
 }
 
 .contact-form button:hover {
-    background-color: #005bb5; /* Couleur plus foncée au survol */
+    background-color: #005bb5;
 }
 
-/* Footer Section */
+/* Footer */
 footer {
     background-color: #222;
     color: white;
