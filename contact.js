@@ -31,12 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (form) {
         form.addEventListener("submit", function (e) {
             e.preventDefault(); // Empêche l'envoi du formulaire pour montrer l'alerte
-
-            // Affiche un message de confirmation
-            alert("Votre message a été envoyé avec succès !");
-            
-            // Réinitialise le formulaire après l'envoi
-            form.reset();
         });
     }
 });
