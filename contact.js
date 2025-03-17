@@ -1,4 +1,4 @@
-/*// Function to auto-resize the textarea
+// Function to auto-resize the textarea
 function autoResizeTextarea() {
     const textarea = document.getElementById("message");
 
