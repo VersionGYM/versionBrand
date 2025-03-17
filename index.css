@@ -170,6 +170,14 @@ nav {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.contact-form {
+    display: none; /* Cache le formulaire au départ */
+}
+
+.active {
+    transform: rotate(180deg); /* Animation pour tourner la flèche */
+}
+
 .contact-form.hidden {
     display: none;
 }
