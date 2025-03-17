@@ -87,22 +87,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactForm = document.querySelector(".contact-form"); // Formulaire
     const contactButton = document.querySelector(".btn"); // Bouton "Contactez-nous"
 
+    // Cacher le formulaire au chargement de la page
+    contactForm.style.display = "none";
+
     if (toggleFormBtn && contactForm) {
         toggleFormBtn.addEventListener("click", () => {
-            if (contactForm.style.display === "none" || contactForm.style.display === "") {
-                contactForm.style.display = "block"; // Afficher
-                toggleFormBtn.classList.add("active"); // Tourner la flèche
+            if (contactForm.style.display === "none") {
+                contactForm.style.display = "block"; // Afficher le formulaire
+                toggleFormBtn.classList.add("flipped"); // Tourner la flèche
             } else {
-                contactForm.style.display = "none"; // Cacher
-                toggleFormBtn.classList.remove("active"); // Remettre la flèche à l'état normal
+                contactForm.style.display = "none"; // Cacher le formulaire
+                toggleFormBtn.classList.remove("flipped"); // Remettre la flèche droite
             }
         });
 
         if (contactButton) {
             contactButton.addEventListener("click", () => {
                 contactForm.style.display = "block"; // Toujours afficher si bouton cliqué
-                toggleFormBtn.classList.add("active"); // Tourner la flèche
+                toggleFormBtn.classList.add("flipped"); // Tourner la flèche
             });
         }
     }
 });
+
