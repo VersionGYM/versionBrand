@@ -68,8 +68,7 @@ if (quoteElement) {
     setInterval(changeQuote, 7000); // Changement toutes les 7 secondes
 }
 
-
-
+// Affichage du popup du logo
 document.addEventListener("DOMContentLoaded", () => {
     const logo = document.querySelector(".logo h1");
     const popup = document.getElementById("logo-popup");
@@ -83,9 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Toggle formulaire de contact avec la flèche et le bouton "Contactez-nous"
 document.addEventListener("DOMContentLoaded", () => {
     const toggleFormBtn = document.querySelector(".toggle-form");
     const contactForm = document.querySelector(".contact-form");
+    const contactButton = document.querySelector(".btn"); // Récupère le bouton "Contactez-nous"
 
     if (toggleFormBtn && contactForm) {
         toggleFormBtn.addEventListener("click", (event) => {
@@ -93,5 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
             contactForm.classList.toggle("hidden");
             toggleFormBtn.classList.toggle("active"); // Tourne la flèche
         });
+
+        // Lorsque le bouton "Contactez-nous" est cliqué, afficher le formulaire
+        if (contactButton) {
+            contactButton.addEventListener("click", () => {
+                contactForm.classList.remove("hidden");
+                toggleFormBtn.classList.add("active"); // Tourne la flèche
+            });
+        }
     }
 });
