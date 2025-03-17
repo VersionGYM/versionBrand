@@ -27,17 +27,15 @@
             </ul>
         </nav>
     </header>
-    
+
     <!-- Hero Section -->
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-text">
-        <h1>Exprimez votre puissance avec Version</h1>
-        <p>Découvrez notre collection de vêtements conçus pour vous accompagner à chaque étape de votre entraînement et dans votre quotidien.
-        <br>Version, c’est plus qu’une marque québécoise, c’est un mode de vie qui valorise la performance, la fierté et le bien-être.</p>
-        <a href="#contact" class="btn" aria-label="Accéder à la section de contact">Contactez-nous</a>
-    </div>
-</section>
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Exprimez votre puissance avec Version</h1>
+            <p>Découvrez notre collection de vêtements conçus pour vous accompagner à chaque étape de votre entraînement et dans votre quotidien. <br>Version, c’est plus qu’une marque québécoise, c’est un mode de vie qui valorise la performance, la fierté et le bien-être.</p>
+            <a href="#contact" class="btn" aria-label="Accéder à la section de contact">Contactez-nous</a>
+        </div>
+    </section>
 
     <!-- Services Section (Nos Produits) -->
     <section id="services" class="services">
@@ -65,32 +63,31 @@
     </section>
 
     <!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="contact-wrapper">
-        <div class="toggle-form">
-            <span>&#9660;</span> <!-- Flèche vers le bas -->
+    <section id="contact" class="contact">
+        <div class="contact-wrapper">
+            <div class="toggle-form">
+                <span>&#9660;</span> <!-- Flèche vers le bas -->
+            </div>
+            <form action="#" method="POST" class="contact-form hidden">
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Votre email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Votre message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
         </div>
-<form action="#" method="POST" class="contact-form hidden">
-    <div class="toggle-form">
-        <span>&#9660;</span> <!-- Flèche vers le bas -->
-    </div>
-    <label for="name">Votre nom :</label>
-    <input type="text" id="name" name="name" required>
-    <label for="email">Votre email :</label>
-    <input type="email" id="email" name="email" required>
-    <label for="message">Votre message :</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-    <button type="submit" class="btn">Envoyer</button>
-</form>
-    </div>
-</section>
-
+    </section>
 
     <!-- Popup du Logo -->
     <div id="logo-popup" class="logo-popup">
         <img src="images/logo.jpg" alt="Logo Version">
     </div>
-    
+
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Version. Tous droits réservés.</p>
