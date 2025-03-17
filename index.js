@@ -60,7 +60,7 @@ if (quoteElement) {
             quoteElement.textContent = quotes[currentQuoteIndex];
             quoteElement.style.opacity = "1"; // Réapparition progressive
             currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
-        }, 1000); // Attendre 1 seconde avant d'afficher la nouvelle citation
+        }, 1500); // Attendre 1.5 seconde avant d'afficher la nouvelle citation
     }
 
     // Initialiser la première citation et démarrer l'intervalle
@@ -72,10 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
   const popup = document.getElementById("logo-popup"); // Le popup du logo
 
-  // Afficher le popup lorsque l'on clique sur le logo
-  logo.addEventListener("click", () => {
+logo.addEventListener("click", () => {
     popup.classList.add("show");  // Ajoute la classe pour afficher le popup
-  });
+    popup.style.visibility = "visible"; // S'assurer que la visibilité est mise à jour immédiatement
+});
 
   // Fermer le popup lorsque l'on clique dessus
   popup.addEventListener("click", () => {
@@ -94,11 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (toggleFormBtn && contactForm) {
         toggleFormBtn.addEventListener("click", () => {
-            if (contactForm.style.display === "none") {
-                contactForm.style.display = "block"; // Afficher le formulaire
+                contactForm.classList.toggle("hidden"); // Ajoute ou enlève la classe 'hidden' pour cacher ou afficher
                 toggleFormBtn.classList.add("flipped"); // Tourner la flèche
             } else {
-                contactForm.style.display = "none"; // Cacher le formulaire
                 toggleFormBtn.classList.remove("flipped"); // Remettre la flèche droite
             }
         });
