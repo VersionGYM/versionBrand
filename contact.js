@@ -24,16 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Fonction de gestion de la soumission du formulaire
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector('.contact-form'); // Formulaire de contact
-
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault(); // Empêche l'envoi du formulaire pour montrer l'alerte
-        });
-    }
-});
 
 // Fonction pour faire apparaître le logo lorsqu'on clique sur le texte "Version"
 document.addEventListener("DOMContentLoaded", () => {
