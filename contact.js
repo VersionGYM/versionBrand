@@ -12,15 +12,18 @@ if (textarea) {
     window.addEventListener('load', autoResizeTextarea);
 }
 
-// Handle form submission
-const form = document.querySelector('.contact-form');
-if (form) {
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Ton message a été envoyé !');
-        form.reset();
-    });
-}
+document.addEventListener("DOMContentLoaded", () => {
+  // Animation de la soumission du formulaire
+  const form = document.querySelector(".contact-form");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();  // Empêcher le comportement par défaut du formulaire
+
+    // Afficher un message de succès
+    alert("Votre message a été envoyé avec succès !");
+    form.reset(); // Réinitialiser le formulaire
+  });
+});
+
 // Fonction de gestion de la soumission du formulaire
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector('.contact-form'); // Formulaire de contact
