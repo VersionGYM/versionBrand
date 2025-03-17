@@ -6,20 +6,30 @@ body {
     background-color: #f4f4f4;
     color: #333;
     width: 100%;
+    /* Supprime les marges et ajuste la largeur du body */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
 header {
-    background-color: #fff;
-    padding: 20px;
+    width: 100%;
+    background-color: #000; /* Ajuste la couleur selon ton site */
+    padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation */
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 0 20px; /* Ajoute un padding pour éviter que le contenu touche les bords */
+    box-sizing: border-box; /* Évite les débordements */
 }
+
 
 header .logo h1 {
     font-size: 24px;
