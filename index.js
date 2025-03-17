@@ -68,19 +68,21 @@ if (quoteElement) {
     setInterval(changeQuote, 7000); // Changement toutes les 7 secondes
 }
 
-// Affichage du popup du logo
 document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector(".logo h1");
-    const popup = document.getElementById("logo-popup");
+  const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
+  const popup = document.getElementById("logo-popup"); // Le popup du logo
 
-    logo.addEventListener("click", () => {
-        popup.classList.add("show");  // Affiche le popup
-    });
+  // Afficher le popup lorsque l'on clique sur le logo
+  logo.addEventListener("click", () => {
+    popup.classList.add("show");  // Ajoute la classe pour afficher le popup
+  });
 
-    popup.addEventListener("click", () => {
-        popup.classList.remove("show");  // Cache le popup quand on clique dessus
-    });
+  // Fermer le popup lorsque l'on clique dessus
+  popup.addEventListener("click", () => {
+    popup.classList.remove("show");  // Retire la classe pour cacher le popup
+  });
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const toggleFormBtn = document.querySelector(".toggle-form"); // Flèche
