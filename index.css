@@ -173,10 +173,6 @@ nav {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.active {
-    transform: rotate(180deg); /* Animation pour tourner la flèche */
-}
-
 .contact-form.hidden {
     display: none;
 }
@@ -256,10 +252,10 @@ nav {
 
 @media (max-width: 768px) {
     .service-container {
-        flex-direction: column; /* Empile les éléments verticalement sur les petits écrans */
+        flex-direction: column;
     }
 
     .service-item {
-        width: 100%; /* Chaque élément prend toute la largeur */
+        width: 100%;
     }
 }
