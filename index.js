@@ -82,25 +82,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Toggle formulaire de contact avec la flèche et le bouton "Contactez-nous"
+// Fonction pour basculer l'affichage du formulaire de contact
 document.addEventListener("DOMContentLoaded", () => {
     const toggleFormBtn = document.querySelector(".toggle-form");
     const contactForm = document.querySelector(".contact-form");
-    const contactButton = document.querySelector(".btn"); // Récupère le bouton "Contactez-nous"
+    const contactButton = document.querySelector(".btn"); // Bouton "Contactez-nous"
 
     if (toggleFormBtn && contactForm) {
         toggleFormBtn.addEventListener("click", (event) => {
-            event.stopPropagation();
+            event.stopPropagation(); // Empêche la propagation de l'événement
             contactForm.classList.toggle("hidden");
             toggleFormBtn.classList.toggle("active"); // Tourne la flèche
         });
 
-        // Lorsque le bouton "Contactez-nous" est cliqué, afficher le formulaire
+        // Affichage du formulaire lorsque le bouton "Contactez-nous" est cliqué
         if (contactButton) {
             contactButton.addEventListener("click", () => {
                 contactForm.classList.remove("hidden");
-                toggleFormBtn.classList.add("active"); // Tourne la flèche
+                toggleFormBtn.classList.add("active"); // Assure que la flèche est tournée
             });
         }
     }
 });
+
