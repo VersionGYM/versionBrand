@@ -98,26 +98,6 @@ nav {
     transform: scale(1.1);
 }
 
-.en-savoir-plus {
-    display: inline-block;
-    padding: 8px 18px;
-    background-color: #f39c12;
-    color: black;
-    text-align: center;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    margin-top: 30px;
-}
-
-.en-savoir-plus:hover {
-    background-color: #e67e22;
-    text-decoration: none;
-    transform: scale(1.1);
-}
-
 /* Nos Produits Section */
 .services {
     background: #fff;
@@ -167,15 +147,8 @@ nav {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Caché par défaut */
     transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.active {
-    transform: rotate(180deg); /* Animation pour tourner la flèche */
-}
-
-.contact-form.hidden {
-    display: none;
 }
 
 .toggle-form {
@@ -193,77 +166,14 @@ nav {
     transition: transform 0.3s ease;
 }
 
-.toggle-form.active span {
+.flipped {
     transform: rotate(180deg);
 }
 
-.contact-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form textarea {
-    resize: none;
-}
-
-.contact-form button:hover {
-    background: #e67e22;
-}
-
-/* Quote Section */
-.quote-container {
-    text-align: center;
-    font-size: 1.5rem;
-    font-style: italic;
-    margin-top: 20px;
-    color: #555;
-}
-
-/* Style du popup du logo */
-.logo-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.logo-popup img {
-    max-width: 80%;
-    max-height: 80%;
-}
-
-.logo-popup.show {
-    opacity: 1;
-    visibility: visible;
-}
-
+/* Responsive */
 @media (min-width: 769px) {
     .contact-form {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
         width: 300px;
         background: rgba(255, 255, 255, 0.9);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 }
