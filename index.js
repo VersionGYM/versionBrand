@@ -75,15 +75,27 @@ document.addEventListener("DOMContentLoaded", () => {
         popup.classList.remove("show");
     });
 
-    const toggleFormBtn = document.querySelector(".toggle-form"); 
-    const contactForm = document.querySelector(".contact-form"); 
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleFormBtn = document.querySelector(".toggle-form"); // Flèche
+    const contactForm = document.querySelector(".contact-form"); // Formulaire
+    const contactButton = document.querySelector(".btn"); // Bouton "Contactez-nous"
 
-    contactForm.style.display = "none";
+    // Cacher le formulaire au chargement de la page
+    contactForm.classList.add("hidden");
 
     if (toggleFormBtn && contactForm) {
         toggleFormBtn.addEventListener("click", () => {
-            contactForm.classList.toggle("hidden"); 
-            toggleFormBtn.classList.toggle("active"); 
+            contactForm.classList.toggle("hidden"); // Ajoute ou enlève la classe 'hidden' pour cacher ou afficher
+            toggleFormBtn.classList.toggle("active"); // Applique la rotation sur la flèche
+        });
+    }
+
+    // Afficher le formulaire lorsque le bouton "Contactez-nous" est cliqué
+    if (contactButton) {
+        contactButton.addEventListener("click", () => {
+            contactForm.classList.remove("hidden"); // Afficher le formulaire
+            toggleFormBtn.classList.add("active"); // Tourner la flèche
         });
     }
 });
+
