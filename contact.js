@@ -40,16 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Fonction pour faire apparaître le logo lorsqu'on clique sur le texte "Version"
 document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector(".logo h1"); // Récupère le titre "Version"
-    const popup = document.getElementById("logo-popup"); // Récupère la pop-up du logo
+  const logo = document.querySelector(".logo h1");
+  const popup = document.getElementById("logo-popup");
 
-    // Affiche ou cache le logo lorsque le titre "Version" est cliqué
-    logo.addEventListener("click", () => {
-        popup.classList.toggle("show");  // Bascule la visibilité du logo
-    });
+  logo.addEventListener("click", () => {
+    popup.classList.add("show");  // Affiche le logo à chaque clic sur "Version"
+  });
 
-    // Ferme le logo lorsqu'on clique dessus
-    popup.addEventListener("click", () => {
-        popup.classList.remove("show");
-    });
+  popup.addEventListener("click", () => {
+    popup.classList.remove("show");  // Cache le logo lorsqu'on clique sur le popup
+  });
 });
