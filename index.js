@@ -1,27 +1,3 @@
-// Function to auto-resize the textarea
-function autoResizeTextarea() {
-    const textarea = document.getElementById("message");
-
-    textarea.style.height = "auto";
-    textarea.style.height = `${textarea.scrollHeight}px`;
-}
-
-const textarea = document.getElementById("message");
-if (textarea) {
-    textarea.addEventListener("input", autoResizeTextarea);
-    window.addEventListener('load', autoResizeTextarea);
-}
-
-// Handle form submission
-const form = document.querySelector('.contact-form');
-if (form) {
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Ton message a été envoyé !');
-        form.reset();
-    });
-}
-
 // Citation Rotation avec effet de fondu fluide
 const quotes = [
     '"Les muscles ne sont pas faits de viande et de sang, mais de volonté et de passion." - Arnold Schwarzenegger',
@@ -47,55 +23,43 @@ let currentQuoteIndex = 0;
 const quoteElement = document.getElementById("quote");
 
 if (quoteElement) {
-    quoteElement.style.transition = "opacity 1s ease-in-out"; 
-
+    quoteElement.style.transition = "opacity 1s ease-in-out"; // Ajoute une transition fluide
+    
     function changeQuote() {
-        quoteElement.style.opacity = "0"; 
+        quoteElement.style.opacity = "0"; // Début du fondu (disparition)
 
         setTimeout(() => {
             quoteElement.textContent = quotes[currentQuoteIndex];
-            quoteElement.style.opacity = "1"; 
+            quoteElement.style.opacity = "1"; // Réapparition progressive
             currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
-        }, 1500);
+        }, 1500); // Attendre 1.5 seconde avant d'afficher la nouvelle citation
     }
 
+    // Initialiser la première citation et démarrer l'intervalle
     changeQuote();
-    setInterval(changeQuote, 7000); 
+    setInterval(changeQuote, 7000); // Changement toutes les 7 secondes
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector(".logo h1"); 
-    const popup = document.getElementById("logo-popup"); 
+  const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
+  const popup = document.getElementById("logo-popup"); // Le popup du logo
 
-    logo.addEventListener("click", () => {
-        popup.classList.add("show");  
-    });
+  logo.addEventListener("click", () => {
+    popup.classList.add("show");  // Ajoute la classe pour afficher le popup
+    popup.style.visibility = "visible"; // S'assurer que la visibilité est mise à jour immédiatement
+  });
 
-    popup.addEventListener("click", () => {
-        popup.classList.remove("show");
-    });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleFormBtn = document.querySelector(".toggle-form"); // Flèche
-    const contactForm = document.querySelector(".contact-form"); // Formulaire
-    const contactButton = document.querySelector(".btn"); // Bouton "Contactez-nous"
-
-    // Cacher le formulaire au chargement de la page
-    contactForm.classList.add("hidden");
-
-    if (toggleFormBtn && contactForm) {
-        toggleFormBtn.addEventListener("click", () => {
-            contactForm.classList.toggle("hidden"); // Ajoute ou enlève la classe 'hidden' pour cacher ou afficher
-            toggleFormBtn.classList.toggle("active"); // Applique la rotation sur la flèche
-        });
-    }
-
-    // Afficher le formulaire lorsque le bouton "Contactez-nous" est cliqué
-    if (contactButton) {
-        contactButton.addEventListener("click", () => {
-            contactForm.classList.remove("hidden"); // Afficher le formulaire
-            toggleFormBtn.classList.add("active"); // Tourner la flèche
-        });
-    }
+  // Fermer le popup lorsque l'on clique dessus
+  popup.addEventListener("click", () => {
+    popup.classList.remove("show");  // Retire la classe pour cacher le popup
+  });
 });
 
+// Rediriger vers la page de contact lors du clic sur le bouton "Contactez-nous"
+const contactButton = document.querySelector(".btn");
+
+if (contactButton) {
+    contactButton.addEventListener("click", () => {
+        window.location.href = "contact.html"; // Rediriger vers la page de contact
+    });
+}
