@@ -2,14 +2,10 @@
 function autoResizeTextarea() {
     const textarea = document.getElementById("message");
 
-    // Reset the textarea height to 'auto' to shrink if text is deleted
     textarea.style.height = "auto";
-    
-    // Set the height to the scrollHeight, which is the full height of the content
     textarea.style.height = `${textarea.scrollHeight}px`;
 }
 
-// Attach the function to the textarea input event to trigger resizing
 const textarea = document.getElementById("message");
 if (textarea) {
     textarea.addEventListener("input", autoResizeTextarea);
@@ -20,7 +16,7 @@ if (textarea) {
 const form = document.querySelector('.contact-form');
 if (form) {
     form.addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent form submission for demo purposes
+        e.preventDefault();
         alert('Ton message a été envoyé !');
         form.reset();
     });
@@ -51,62 +47,43 @@ let currentQuoteIndex = 0;
 const quoteElement = document.getElementById("quote");
 
 if (quoteElement) {
-    quoteElement.style.transition = "opacity 1s ease-in-out"; // Ajoute une transition fluide
-    
+    quoteElement.style.transition = "opacity 1s ease-in-out"; 
+
     function changeQuote() {
-        quoteElement.style.opacity = "0"; // Début du fondu (disparition)
+        quoteElement.style.opacity = "0"; 
 
         setTimeout(() => {
             quoteElement.textContent = quotes[currentQuoteIndex];
-            quoteElement.style.opacity = "1"; // Réapparition progressive
+            quoteElement.style.opacity = "1"; 
             currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
-        }, 1500); // Attendre 1.5 seconde avant d'afficher la nouvelle citation
+        }, 1500);
     }
 
-    // Initialiser la première citation et démarrer l'intervalle
     changeQuote();
-    setInterval(changeQuote, 7000); // Changement toutes les 7 secondes
+    setInterval(changeQuote, 7000); 
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
-  const popup = document.getElementById("logo-popup"); // Le popup du logo
+    const logo = document.querySelector(".logo h1"); 
+    const popup = document.getElementById("logo-popup"); 
 
-logo.addEventListener("click", () => {
-    popup.classList.add("show");  // Ajoute la classe pour afficher le popup
-    popup.style.visibility = "visible"; // S'assurer que la visibilité est mise à jour immédiatement
-});
+    logo.addEventListener("click", () => {
+        popup.classList.add("show");  
+    });
 
-  // Fermer le popup lorsque l'on clique dessus
-  popup.addEventListener("click", () => {
-    popup.classList.remove("show");  // Retire la classe pour cacher le popup
-  });
-});
+    popup.addEventListener("click", () => {
+        popup.classList.remove("show");
+    });
 
+    const toggleFormBtn = document.querySelector(".toggle-form"); 
+    const contactForm = document.querySelector(".contact-form"); 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleFormBtn = document.querySelector(".toggle-form"); // Flèche
-    const contactForm = document.querySelector(".contact-form"); // Formulaire
-    const contactButton = document.querySelector(".btn"); // Bouton "Contactez-nous"
-
-    // Cacher le formulaire au chargement de la page
     contactForm.style.display = "none";
 
     if (toggleFormBtn && contactForm) {
         toggleFormBtn.addEventListener("click", () => {
-                contactForm.classList.toggle("hidden"); // Ajoute ou enlève la classe 'hidden' pour cacher ou afficher
-                toggleFormBtn.classList.add("flipped"); // Tourner la flèche
-            } else {
-                toggleFormBtn.classList.remove("flipped"); // Remettre la flèche droite
-            }
+            contactForm.classList.toggle("hidden"); 
+            toggleFormBtn.classList.toggle("active"); 
         });
-
-        if (contactButton) {
-            contactButton.addEventListener("click", () => {
-                contactForm.style.display = "block"; // Toujours afficher si bouton cliqué
-                toggleFormBtn.classList.add("flipped"); // Tourner la flèche
-            });
-        }
     }
 });
-
