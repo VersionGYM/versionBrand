@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Animation de la soumission du formulaire
   const form = document.querySelector(".contact-form");
   form.addEventListener("submit", function(e) {
+    e.preventDefault();  // Empêcher le comportement par défaut du formulaire
 
     // Afficher un message de succès
     alert("Votre message a été envoyé avec succès !");
     form.reset(); // Réinitialiser le formulaire
   });
 });
-
 
 // Fonction pour faire apparaître le logo lorsqu'on clique sur le texte "Version"
 document.addEventListener("DOMContentLoaded", () => {
