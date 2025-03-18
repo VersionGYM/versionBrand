@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
+    const logo = document.querySelector(".logo h1 a"); // Récupère le titre du logo "Version"
     const popup = document.getElementById("logo-popup"); // Le popup du logo
 
     logo.addEventListener("click", () => {
