@@ -162,7 +162,7 @@ nav {
 }
 
 /* Contact Section */
-.contact-form {
+/*.contact-form {
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -222,7 +222,7 @@ nav {
 
 .contact-form button:hover {
     background: #e67e22;
-}
+} */
 
 /* Popup du Logo */
 .logo-popup {
