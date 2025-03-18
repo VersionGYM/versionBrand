@@ -138,8 +138,9 @@ footer {
 }
 
 .logo-popup {
-    opacity: 0;
-    visibility: hidden;
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .logo-popup.show {
