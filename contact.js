@@ -26,13 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Création du popup du logo
-document.addEventListener("DOMContentLoaded", function () {
     const logoPopup = document.createElement("div");
     logoPopup.classList.add("logo-popup");
     logoPopup.innerHTML = `<img src="logo.png" alt="Logo">`;
     document.body.appendChild(logoPopup);
 
-    const logoButton = document.querySelector(".logo h1 a"); // Sélectionner le lien "Version"
+    const logoButton = document.querySelector(".logo h1"); // Sélectionner le texte "Version" au lieu de chercher un lien
 
     if (logoButton) {
         logoButton.addEventListener("click", function (e) {
@@ -42,14 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Fermer le logo en cliquant en dehors de l'image
-    document.addEventListener("click", function (event) {
-        if (!logoPopup.contains(event.target) && event.target !== logoButton) {
-            logoPopup.classList.remove("show");
-        }
-    });
-});
-
-    // Vérifier que les interactions restent fonctionnelles après fermeture du logo
     document.addEventListener("click", function (event) {
         if (!logoPopup.contains(event.target) && event.target !== logoButton) {
             logoPopup.classList.remove("show");
