@@ -133,8 +133,9 @@ footer {
 }
 
 .logo-popup img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 80%;  /* Limite la largeur à 80% de l'écran */
+    max-height: 80%; /* Limite la hauteur à 80% de l'écran */
+    object-fit: contain; /* Conserve les proportions de l'image */
 }
 
 .logo-popup.show {
