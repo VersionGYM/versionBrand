@@ -26,26 +26,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Création du popup du logo
+document.addEventListener("DOMContentLoaded", function () {
     const logoPopup = document.createElement("div");
     logoPopup.classList.add("logo-popup");
     logoPopup.innerHTML = `<img src="logo.png" alt="Logo">`;
     document.body.appendChild(logoPopup);
 
-    const logoButton = document.querySelector(".logo h1");
+    const logoButton = document.querySelector(".logo h1 a"); // Cibler le lien dans <h1>
 
     if (logoButton) {
         logoButton.addEventListener("click", function (e) {
-            e.preventDefault(); // Empêcher la redirection éventuelle
+            e.preventDefault(); // 🔥 Empêche la redirection vers index.html
             logoPopup.classList.add("show");
         });
     }
 
     // Fermer le logo en cliquant en dehors de l'image
-    logoPopup.addEventListener("click", function (event) {
-        if (event.target === logoPopup) {
+    document.addEventListener("click", function (event) {
+        if (!logoPopup.contains(event.target) && event.target !== logoButton) {
             logoPopup.classList.remove("show");
         }
     });
+});
 
     // Vérifier que les interactions restent fonctionnelles après fermeture du logo
     document.addEventListener("click", function (event) {
