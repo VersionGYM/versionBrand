@@ -133,9 +133,10 @@ footer {
 }
 
 .logo-popup img {
-    max-width: 80%;  /* Limite la largeur à 80% de l'écran */
-    max-height: 80%; /* Limite la hauteur à 80% de l'écran */
-    object-fit: contain; /* Conserve les proportions de l'image */
+    width: 300px !important; /* Fixe la largeur à 300px */
+    height: auto !important; /* Conserve le ratio de l'image */
+    border: 5px solid red !important; /* Ajoute un bord pour mieux voir l'image */
+    display: block !important; /* S'assure qu'elle est bien affichée */
 }
 
 .logo-popup.show {
