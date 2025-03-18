@@ -136,6 +136,11 @@ footer {
     max-height: 80%;
 }
 
+.logo-popup {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .logo-popup.show {
     opacity: 1;
     visibility: visible;
