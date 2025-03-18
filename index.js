@@ -41,21 +41,24 @@ if (quoteElement) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector(".logo h1"); // Sélection du titre "Version"
-    const popup = document.getElementById("logo-popup"); // Popup du logo
+    const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
+    const popup = document.getElementById("logo-popup"); // Le popup du logo
+    const popupImage = popup.querySelector("img"); // L'image à l'intérieur du popup
 
-    if (logo && popup) {
-        logo.addEventListener("click", (e) => {
-            e.stopPropagation(); // Empêche le clic d'atteindre `document`
-            popup.classList.toggle("show"); // Alterne entre affiché et caché
-        });
+    logo.addEventListener("click", () => {
+        popup.classList.add("show");  // Ajoute la classe pour afficher le popup
+        popup.style.visibility = "visible"; // S'assurer que la visibilité est mise à jour immédiatement
+    });
 
-        document.addEventListener("click", (event) => {
-            if (!popup.contains(event.target) && event.target !== logo) {
-                popup.classList.remove("show"); // Ferme le popup si on clique ailleurs
-            }
-        });
-    }
+    // Fermer le popup lorsque l'on clique en dehors de l'image
+    popup.addEventListener("click", (event) => {
+        if (!popupImage.contains(event.target)) {
+            popup.classList.remove("show");  // Retire la classe pour cacher le popup
+            setTimeout(() => {
+                popup.style.visibility = "hidden";
+            }, 300); // Temps pour que l'animation s'applique
+        }
+    });
 });
 
 // Rediriger vers la page de contact lors du clic sur le bouton "Contactez-nous"
