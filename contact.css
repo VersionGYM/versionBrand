@@ -118,29 +118,25 @@ footer {
 /* Popup du logo */
 .logo-popup {
     position: fixed;
-    top: 50%; /* Centrer verticalement */
-    left: 50%; /* Centrer horizontalement */
-    transform: translate(-50%, -50%); /* Centrer parfaitement l'image */
-    width: 80vw; /* Ajuste la largeur */
-    height: 80vh; /* Ajuste la hauteur */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.8);
-    display: flex;
+    display: none; /* Caché par défaut */
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.logo-popup img {
-    position: relative; /* Permet de mieux gérer le positionnement */
-    top: 0;
-    left: 0;
-    max-width: 100%; /* Permet à l'image de s'ajuster à la taille de l'écran */
-}
-
 .logo-popup.show {
+    display: flex !important; /* Forcer l'affichage */
     opacity: 1 !important;
     visibility: visible !important;
-    display: flex !important;
+}
+
+.logo-popup img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid red; /* Pour voir si l'image est bien là */
 }
