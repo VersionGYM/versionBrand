@@ -117,6 +117,7 @@ footer {
 
 /* Popup du logo */
 .logo-popup {
+    border: 2px solid red;
     position: fixed;
     top: 0;
     left: 0;
