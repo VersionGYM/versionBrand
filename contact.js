@@ -25,19 +25,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-document.addEventListener("DOMContentLoaded", () => {
+    // Gestion du popup du logo
     const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
     const popup = document.getElementById("logo-popup"); // Le popup du logo
 
-    logo.addEventListener("click", () => {
-        popup.classList.add("show");  // Affiche le popup
-    });
+    if (logo && popup) {
+        logo.addEventListener("click", () => {
+            popup.classList.add("show");  // Affiche le popup
+        });
 
-    // Fermer le popup lorsque l'on clique à l'extérieur du popup
-    popup.addEventListener("click", (event) => {
-        // Vérifie si le clic a eu lieu à l'extérieur du contenu du popup
-        if (event.target === popup) {
-            popup.classList.remove("show");  // Cache le popup
-        }
-    });
+        // Fermer le popup lorsque l'on clique à l'extérieur du popup
+        popup.addEventListener("click", (event) => {
+            if (event.target === popup) {
+                popup.classList.remove("show");  // Cache le popup
+            }
+        });
+    } else {
+        console.error("Erreur : Impossible de trouver le logo ou le popup.");
+    }
 });
