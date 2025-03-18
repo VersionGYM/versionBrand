@@ -41,18 +41,21 @@ if (quoteElement) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
-  const popup = document.getElementById("logo-popup"); // Le popup du logo
+    const logo = document.querySelector(".logo h1"); // Sélection du titre "Version"
+    const popup = document.getElementById("logo-popup"); // Popup du logo
 
-  logo.addEventListener("click", () => {
-    popup.classList.add("show");  // Ajoute la classe pour afficher le popup
-    popup.style.visibility = "visible"; // S'assurer que la visibilité est mise à jour immédiatement
-  });
+    if (logo && popup) {
+        logo.addEventListener("click", (e) => {
+            e.stopPropagation(); // Empêche le clic d'atteindre `document`
+            popup.classList.toggle("show"); // Alterne entre affiché et caché
+        });
 
-  // Fermer le popup lorsque l'on clique dessus
-  popup.addEventListener("click", () => {
-    popup.classList.remove("show");  // Retire la classe pour cacher le popup
-  });
+        document.addEventListener("click", (event) => {
+            if (!popup.contains(event.target) && event.target !== logo) {
+                popup.classList.remove("show"); // Ferme le popup si on clique ailleurs
+            }
+        });
+    }
 });
 
 // Rediriger vers la page de contact lors du clic sur le bouton "Contactez-nous"
