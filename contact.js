@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
     logoPopup.innerHTML = `<img src="logo.png" alt="Logo">`;
     document.body.appendChild(logoPopup);
 
-    const logoButton = document.querySelector(".logo h1 a"); // Cibler le lien dans <h1>
+    const logoButton = document.querySelector(".logo h1 a"); // Sélectionner le lien "Version"
 
     if (logoButton) {
         logoButton.addEventListener("click", function (e) {
-            e.preventDefault(); // 🔥 Empêche la redirection vers index.html
-            logoPopup.classList.add("show");
+            e.preventDefault(); // 🔥 Empêcher la redirection vers index.html
+            logoPopup.classList.toggle("show"); // Afficher/Masquer le popup
         });
     }
 
