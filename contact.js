@@ -25,15 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Fonction pour faire apparaître le logo lorsqu'on clique sur le texte "Version"
-document.addEventListener("DOMContentLoaded", () => {
-  const logo = document.querySelector(".logo h1");
-  const popup = document.getElementById("logo-popup");
+document.addEventListener("DOMContentLoaded", function () {
+    const logoPopup = document.createElement("div");
+    logoPopup.classList.add("logo-popup");
+    logoPopup.innerHTML = `<img src="logo.png" alt="Logo">`;
+    document.body.appendChild(logoPopup);
 
-  logo.addEventListener("click", () => {
-    popup.classList.add("show");  // Affiche le logo à chaque clic sur "Version"
-  });
+    const logoButton = document.querySelector(".logo h1");
 
-  popup.addEventListener("click", () => {
-    popup.classList.remove("show");  // Cache le logo lorsqu'on clique sur le popup
-  });
+    logoButton.addEventListener("click", function () {
+        logoPopup.classList.add("show");
+    });
+
+    // Fermer le logo en cliquant en dehors de l'image
+    logoPopup.addEventListener("click", function (event) {
+        if (event.target === logoPopup) {
+            logoPopup.classList.remove("show");
+        }
+    });
 });
