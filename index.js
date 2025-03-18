@@ -43,23 +43,20 @@ if (quoteElement) {
 document.addEventListener("DOMContentLoaded", () => {
     const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
     const popup = document.getElementById("logo-popup"); // Le popup du logo
-    const popupImage = popup.querySelector("img"); // L'image à l'intérieur du popup
 
     logo.addEventListener("click", () => {
-        popup.classList.add("show");  // Ajoute la classe pour afficher le popup
-        popup.style.visibility = "visible"; // S'assurer que la visibilité est mise à jour immédiatement
+        popup.classList.add("show");  // Affiche le popup
     });
 
-    // Fermer le popup lorsque l'on clique en dehors de l'image
+    // Fermer le popup lorsque l'on clique à l'extérieur du popup
     popup.addEventListener("click", (event) => {
-        if (!popupImage.contains(event.target)) {
-            popup.classList.remove("show");  // Retire la classe pour cacher le popup
-            setTimeout(() => {
-                popup.style.visibility = "hidden";
-            }, 300); // Temps pour que l'animation s'applique
+        // Vérifie si le clic a eu lieu à l'extérieur du contenu du popup
+        if (event.target === popup) {
+            popup.classList.remove("show");  // Cache le popup
         }
     });
 });
+
 
 // Rediriger vers la page de contact lors du clic sur le bouton "Contactez-nous"
 const contactButton = document.querySelector(".btn");
