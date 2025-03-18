@@ -25,25 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Création du popup du logo
-    const logoPopup = document.createElement("div");
-    logoPopup.classList.add("logo-popup");
-    logoPopup.innerHTML = `<img src="logo.png" alt="Logo">`;
-    document.body.appendChild(logoPopup);
+document.addEventListener("DOMContentLoaded", () => {
+    const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
+    const popup = document.getElementById("logo-popup"); // Le popup du logo
 
-    const logoButton = document.querySelector(".logo h1"); // Sélectionner le texte "Version" au lieu de chercher un lien
+    logo.addEventListener("click", () => {
+        popup.classList.add("show");  // Affiche le popup
+    });
 
-    if (logoButton) {
-        logoButton.addEventListener("click", function (e) {
-            e.preventDefault(); // 🔥 Empêcher la redirection vers index.html
-            logoPopup.classList.toggle("show"); // Afficher/Masquer le popup
-        });
-    }
-
-    // Fermer le logo en cliquant en dehors de l'image
-    document.addEventListener("click", function (event) {
-        if (!logoPopup.contains(event.target) && event.target !== logoButton) {
-            logoPopup.classList.remove("show");
+    // Fermer le popup lorsque l'on clique à l'extérieur du popup
+    popup.addEventListener("click", (event) => {
+        // Vérifie si le clic a eu lieu à l'extérieur du contenu du popup
+        if (event.target === popup) {
+            popup.classList.remove("show");  // Cache le popup
         }
     });
 });
