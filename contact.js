@@ -26,19 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector(".logo h1"); // Récupère le titre du logo "Version"
-    const popup = document.getElementById("logo-popup"); // Le popup du logo
+    const logo = document.querySelector(".logo h1");
+    const popup = document.getElementById("logo-popup");
 
     logo.addEventListener("click", () => {
-        popup.classList.add("show");  // Affiche le popup
+        popup.classList.add("show");
     });
 
-    // Fermer le popup lorsque l'on clique à l'extérieur du popup
     popup.addEventListener("click", (event) => {
-        // Vérifie si le clic a eu lieu à l'extérieur du contenu du popup
         if (event.target === popup) {
-            popup.classList.remove("show");  // Cache le popup
+            popup.classList.remove("show");
         }
     });
-});
 });
